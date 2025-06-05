@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Genres - Book Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+    }
+
+    .header {
+      background-color: #00796b;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .genre-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .genre-card {
+      background-color: white;
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .genre-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .genre-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .genre-card .content {
+      padding: 20px;
+    }
+
+    .genre-card .content h2 {
+      color: #00796b;
+      margin-top: 0;
+    }
+
+    .history-box {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .history-box h3 {
+      color: #004d40;
+    }
+
+    .history-box p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Explore Book Genres</h1>
+    <p>Click a genre to learn its history</p>
+  </div>
+
+  <div class="genre-container">
+
+    <!-- Academic -->
+    <div class="genre-card" onclick="showHistory('academic')">
+      <img src="image/images.jpg" alt="Academic Books">
+      <div class="content">
+        <h2>Academic</h2>
+        <p>Textbooks, journals & study materials</p>
+      </div>
+    </div>
+
+    <!-- Fiction -->
+    <div class="genre-card" onclick="showHistory('fiction')">
+      <img src="image/Code Breaker_9.29 COVER.jpg" alt="Fiction Books">
+      <div class="content">
+        <h2>Fiction</h2>
+        <p>Novels, thrillers, adventures & more</p>
+      </div>
+    </div>
+
+    <!-- Non-Fiction -->
+    <div class="genre-card" onclick="showHistory('nonfiction')">
+      <img src="image/images.jpg" alt="Non-Fiction Books">
+      <div class="content">
+        <h2>Non-Fiction</h2>
+        <p>Real-life stories, biographies, and facts</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="historyBox" class="history-box">
+    <h3 id="historyTitle"></h3>
+    <p id="historyText"></p>
+  </div>
+
+  <script>
+    function showHistory(type) {
+      const title = document.getElementById('historyTitle');
+      const text = document.getElementById('historyText');
+      const box = document.getElementById('historyBox');
+
+      if (type === 'academic') {
+        title.innerText = 'Academic Books';
+        text.innerText = 'Academic books include textbooks, journals, and educational materials designed for schools, colleges, and universities. They aim to educate, inform, and support academic progress in specific fields.';
+      } else if (type === 'fiction') {
+        title.innerText = 'Fiction Books';
+        text.innerText = 'Fiction books are works of imaginative storytelling. They include genres like novels, thrillers, horror, and adventure, offering readers escapism, creativity, and emotional experience.';
+      } else if (type === 'nonfiction') {
+        title.innerText = 'Non-Fiction Books';
+        text.innerText = 'Non-fiction books are based on real events, people, and facts. This genre includes biographies, memoirs, self-help, history, and more. They inform, educate, and inspire with true content.';
+      }
+
+      box.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
+!

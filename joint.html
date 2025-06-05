@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Join Us - Book Store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #80deea);
+      color: #333;
+    }
+
+    .header {
+      background-color: #006064;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .form-container {
+      max-width: 600px;
+      background: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .form-container h2 {
+      color: #006064;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .thank-you {
+      display: none;
+      text-align: center;
+      font-size: 20px;
+      margin-top: 30px;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Join Our Book Lover Community</h1>
+    <p>Get exclusive updates, recommendations & offers</p>
+  </div>
+
+  <div class="form-container">
+    <h2>Fill in your details</h2>
+    <form id="joinForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required />
+
+      <label for="genre">Favorite Genre:</label>
+      <select id="genre">
+        <option>Fiction</option>
+        <option>Non-Fiction</option>
+        <option>Academic</option>
+        <option>Thriller</option>
+        <option>Biography</option>
+      </select>
+
+      <label for="message">Why do you love books?</label>
+      <textarea id="message" rows="4"></textarea>
+
+      <button type="submit">Join Now</button>
+    </form>
+
+    <div class="thank-you" id="thankYouMessage">
+      Thank you for joining! We'll keep in touch!
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('joinForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

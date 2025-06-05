@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Store</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 0; background: #f5f5f5; }
+    header { background: #333; color: #fff; padding: 15px; text-align: center; }
+    nav a { margin: 0 10px; color: white; text-decoration: none; }
+    .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .card {
+      background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 200px; margin: 15px; overflow: hidden; text-align: center;
+    }
+    .card img { width: 100%; height: 250px; object-fit: cover; }
+    .card h3 { padding: 10px 0; }
+    .card a {
+      display: block; padding: 10px;
+      background: #007BFF; color: white; text-decoration: none;
+    }
+    .card a:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Book Store</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="genre.html">Genre</a>
+    <a href="about.html">About Us</a>
+    <a href="join.html">Join Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <img src="image/images.jpg" alt="Novel Book" />
+    <h3>Mystery of the Night</h3>
+    <a href="novel-book.html">See History</a>
+  </div>
+
+  <div class="card">
+    <img src="image/images (2).jpg" alt="Adventure Book" />
+    <h3>Jungle Quest</h3>
+    <a href="adventure-book.html">See History</a>
+  </div>
+
+  <div class="card">
+    <img src="image/images (1).jpg" alt="Detective Book" />
+    <h3>The Silent Clue</h3>
+    <a href="detective-book.html">See History</a>
+  </div>
+
+  <div class="card">
+    <img src="image/Code Breaker_9.29 COVER.jpg" alt="Thriller Book" />
+    <h3>Edge of Fear</h3>
+    <a href="thriller-book.html">See History</a>
+  </div>
+
+  <div class="card">
+    <img src="image/59d652f9e0044.jpg" alt="Horror Book" />
+    <h3>Haunted Truth</h3>
+    <a href="horror-book.html">See History</a>
+  </div>
+</div>
+
+</body>
+</html>
